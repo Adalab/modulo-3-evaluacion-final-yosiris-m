@@ -1,0 +1,13 @@
+.inputTextBox {
+  text-align: center;
+}
+
+.inputText {
+  font-size: 18px;
+  color: whitesmoke;
+  border: 1px solid rgb(69, 187, 207);
+  width: 350px;
+  height: 30px;
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.767);
+}

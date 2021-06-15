@@ -39,13 +39,13 @@ class App extends React.Component {
 
     return (
       <div>
-        <img className="title" src={logo} />
-
+        <div className="title">
+          <img src={logo} className="images" />
+        </div>
         <Filters
           filterText={this.state.filterText}
           onFilterChange={this.handleFilterText}
         />
-
         <CharacterList characters={filterResult} />
       </div>
     );

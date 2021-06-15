@@ -1,15 +1,7 @@
-.inputText {
-  display: flex;
-  flex-direction: row;
-  background-color: black;
-  color: whitesmoke;
-  margin-bottom: 20px;
-}
-
 .title {
-  width: 300px;
-  display: flex;
+  text-align: center;
 }
-
-.actorFilter {
+.images {
+  width: 300px;
+  padding: 40px 0;
 }

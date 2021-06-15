@@ -1,0 +1,25 @@
+.CardImages {
+  display: flex;
+  flex-direction: row;
+  margin-top: 20px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.lasName {
+  padding-top: 10px 15px;
+  margin-left: 10px;
+  height: 29px;
+}
+
+.box {
+  margin-left: 20px;
+  margin-top: 25px;
+  background-color: rgb(69, 187, 207);
+  color: aliceblue;
+  font-weight: bold;
+}
+
+body {
+  background-color: black;
+}

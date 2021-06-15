@@ -1,14 +1,15 @@
 import React from "react";
-
 class CharacterCard extends React.Component {
   render() {
     return (
-      <div className="Filter">
-        <div>
-          <img src={this.props.actor.image} />{" "}
+      <div className="cardBox">
+        <div className="box">
+          <div>
+            <img src={this.props.actor.image} />
+          </div>
+          <div className="lasName">{this.props.actor.name}</div>
+          <div className="lasName">{this.props.actor.species}</div>
         </div>
-        <div> {this.props.actor.name} </div>
-        <div> {this.props.actor.species}</div>
       </div>
     );
   }
