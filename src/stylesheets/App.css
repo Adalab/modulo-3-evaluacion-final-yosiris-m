@@ -1,0 +1,15 @@
+.inputText {
+  display: flex;
+  flex-direction: row;
+  background-color: black;
+  color: whitesmoke;
+  margin-bottom: 20px;
+}
+
+.title {
+  width: 300px;
+  display: flex;
+}
+
+.actorFilter {
+}
