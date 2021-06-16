@@ -4,11 +4,15 @@ const FetchData = () => {
   )
     .then((response) => response.json())
     .then((data) => {
-      const result = data.results.map((result) => {
+      const result = data.results.map((character) => {
         return {
-          image: result.image,
-          name: `${result.name}`,
-          species: result.species,
+          id: character.id,
+          image: character.image,
+          name: character.name,
+          species: character.species,
+          status: character.status,
+          origin: character.origin.name,
+          episode: character.episode,
         };
       });
 

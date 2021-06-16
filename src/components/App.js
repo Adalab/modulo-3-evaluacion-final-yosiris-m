@@ -1,9 +1,12 @@
 import "../stylesheets/App.css";
 import React from "react";
 import FetchData from "../services/Api";
+// import localStorage from "../services/LocalStorage";
 import logo from "../images/Rick_Morty_logo.png";
 import CharacterList from "./CharacterList";
 import Filters from "./Filters";
+import CharacterDetail from "./CharacterDetail";
+import { Route, Switch } from "react-router-dom";
 
 class App extends React.Component {
   constructor(props) {
@@ -39,14 +42,25 @@ class App extends React.Component {
 
     return (
       <div>
-        <div className="title">
-          <img src={logo} className="images" />
-        </div>
-        <Filters
-          filterText={this.state.filterText}
-          onFilterChange={this.handleFilterText}
-        />
-        <CharacterList characters={filterResult} />
+        <Switch>
+          <Route exact path="/">
+            <div className="title">
+              <img src={logo} className="images" alt="imagen" />
+            </div>
+            <Filters
+              filterText={this.state.filterText}
+              onFilterChange={this.handleFilterText}
+            />
+            <CharacterList characters={filterResult} />
+          </Route>
+          <Route
+            exact
+            path="/character/:id"
+            render={(props) => (
+              <CharacterDetail {...props} characters={this.state.result} />
+            )}
+          />
+        </Switch>
       </div>
     );
   }
