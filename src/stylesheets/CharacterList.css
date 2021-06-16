@@ -1,20 +1,23 @@
 .CardImages {
-  display: flex;
-  flex-direction: row;
+  display: grid;
+  grid-template-columns: 0fr 0fr 0fr 0fr 0fr;
   margin-top: 20px;
-  flex-wrap: wrap;
   justify-content: center;
+  text-decoration: none;
 }
 
 .lasName {
   padding-top: 10px 15px;
   margin-left: 10px;
   height: 29px;
+  padding-top: 8px;
 }
 
+.photo {
+  width: 240px;
+}
 .box {
   margin-left: 20px;
-  margin-top: 25px;
   background-color: rgb(69, 187, 207);
   color: aliceblue;
   font-weight: bold;
@@ -24,7 +27,6 @@ body {
   background-color: black;
 }
 
-.card {
-  display: grid;
-  grid-row: 1fr;
+.noResults {
+  color: whitesmoke;
 }

@@ -1,4 +1,5 @@
 import React from "react";
+import "../stylesheets/CharacterCard.css";
 
 class CharacterCard extends React.Component {
   render() {
@@ -6,10 +7,10 @@ class CharacterCard extends React.Component {
       <div className="cardBox">
         <div className="box">
           <div>
-            <img src={this.props.actor.image} alt="imagen" />
+            <img className="photo" src={this.props.actor.image} alt="imagen" />
           </div>
           <div className="lasName">{this.props.actor.name}</div>
-          <div className="lasName">{this.props.actor.species}</div>
+          <div className="lastSpecies">{this.props.actor.species}</div>
         </div>
       </div>
     );

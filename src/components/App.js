@@ -37,7 +37,6 @@ class App extends React.Component {
   }
 
   render() {
-    // crear constante con un array que venga de filtrar el estado "this.state.result"
     let filterResult = this.state.result.filter((actor) => {
       return actor.name
         .toLowerCase()
@@ -46,11 +45,12 @@ class App extends React.Component {
 
     return (
       <div>
+        <div className="title">
+          <img src={logo} className="images" alt="imagen" />
+        </div>
         <Switch>
           <Route exact path="/">
-            <div className="title">
-              <img src={logo} className="images" alt="imagen" />
-            </div>
+            <div className="title"></div>
             <Filters
               filterText={this.state.filterText}
               onFilterChange={this.handleFilterText}
