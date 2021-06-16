@@ -23,3 +23,8 @@
 body {
   background-color: black;
 }
+
+.card {
+  display: grid;
+  grid-row: 1fr;
+}

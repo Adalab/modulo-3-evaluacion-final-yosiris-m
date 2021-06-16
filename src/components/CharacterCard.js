@@ -6,7 +6,7 @@ class CharacterCard extends React.Component {
       <div className="cardBox">
         <div className="box">
           <div>
-            <img src={this.props.actor.image} />
+            <img src={this.props.actor.image} alt="imagen" />
           </div>
           <div className="lasName">{this.props.actor.name}</div>
           <div className="lasName">{this.props.actor.species}</div>

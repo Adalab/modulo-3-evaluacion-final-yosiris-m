@@ -12,7 +12,7 @@ const FetchData = () => {
           species: character.species,
           status: character.status,
           origin: character.origin.name,
-          episode: character.episode,
+          episode: character.episode.length,
         };
       });
 

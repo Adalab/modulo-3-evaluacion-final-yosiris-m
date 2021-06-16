@@ -1,7 +1,7 @@
 import "../stylesheets/App.css";
 import React from "react";
 import FetchData from "../services/Api";
-// import localStorage from "../services/LocalStorage";
+import ls from "../services/localExport";
 import logo from "../images/Rick_Morty_logo.png";
 import CharacterList from "./CharacterList";
 import Filters from "./Filters";
@@ -19,8 +19,12 @@ class App extends React.Component {
   }
 
   componentDidMount() {
-    if (this.state.result.length === 0) {
+    const resultLocal = ls.getLocal();
+    if (resultLocal) {
+      this.setState({ result: resultLocal });
+    } else {
       FetchData().then((result) => {
+        ls.setLocal(result);
         this.setState({ result: result });
       });
     }
