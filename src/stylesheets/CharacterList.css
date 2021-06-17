@@ -1,9 +1,9 @@
 .CardImages {
   display: grid;
-  grid-template-columns: 0fr 0fr 0fr 0fr 0fr;
+  grid-template-columns: 0fr;
   margin-top: 20px;
-  justify-content: center;
   text-decoration: none;
+  justify-content: center;
 }
 
 .lasName {
@@ -11,16 +11,54 @@
   margin-left: 10px;
   height: 29px;
   padding-top: 8px;
+  font-size: 18px;
 }
 
 .photo {
-  width: 240px;
-}
-
-body {
-  background-color: black;
+  width: 268px;
 }
 
 .noResults {
   color: whitesmoke;
+  display: flex;
+  justify-content: center;
+  font-size: 25px;
+  padding-top: 10px;
+}
+
+@media all and (min-width: 768px) {
+  .CardImages {
+    grid-template-columns: 0fr 0fr;
+  }
+
+  .lasName {
+    font-size: 20px;
+  }
+
+  .photo {
+    width: 350px;
+  }
+
+  .noResults {
+    font-size: 30px;
+  }
+}
+
+@media all and (min-width: 1200px) {
+  .CardImages {
+    display: grid;
+    grid-template-columns: 0fr 0fr 0fr 0fr 0fr;
+    margin-top: 20px;
+    justify-content: center;
+    text-decoration: none;
+    align-items: center;
+  }
+
+  .photo {
+    width: 250px;
+  }
+
+  .noResults {
+    font-size: 35px;
+  }
 }

@@ -2,6 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import "../stylesheets/CharacterDetail.css";
 import NotFound from "./NotFound";
+import PropTypes from "prop-types";
 class CharacterDetail extends React.Component {
   render() {
     const character = this.props.characters.find(
@@ -21,15 +22,15 @@ class CharacterDetail extends React.Component {
             <img
               className="containerImage"
               src={character.image}
-              alt="images"
+              alt="Character"
             />
 
             <div className="description">
               <div className="lasNameCard">{character.name}</div>
-              <div>Status:{character.status}</div>
-              <div>Species:{character.species}</div>
-              <div>Origin:{character.origin.name}</div>
-              <div>Episode:{character.episode}</div>
+              <div className="lasName1">Status:{character.status}</div>
+              <div className="lasName1">Species:{character.species}</div>
+              <div className="lasName1">Origin:{character.origin.name}</div>
+              <div className="lasName1">Episode:{character.episode}</div>
             </div>
           </div>
         </div>
@@ -37,4 +38,10 @@ class CharacterDetail extends React.Component {
     );
   }
 }
+
+CharacterDetail.propTypes = {
+  character: PropTypes.array,
+  characters: PropTypes.array,
+};
+
 export default CharacterDetail;
