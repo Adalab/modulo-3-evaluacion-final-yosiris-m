@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types";
 import CharacterCard from "./CharacterCard";
 import { Link } from "react-router-dom";
 import "../stylesheets/CharacterList.css";
@@ -26,4 +27,9 @@ class CharacterList extends React.Component {
     );
   }
 }
+
+CharacterList.propTypes = {
+  characters: PropTypes.array,
+};
+
 export default CharacterList;

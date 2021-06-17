@@ -5,13 +5,11 @@ class CharacterCard extends React.Component {
   render() {
     return (
       <div className="cardBox">
-        <div className="box">
-          <div>
-            <img className="photo" src={this.props.actor.image} alt="imagen" />
-          </div>
-          <div className="lasName">{this.props.actor.name}</div>
-          <div className="lastSpecies">{this.props.actor.species}</div>
+        <div>
+          <img className="photo" src={this.props.actor.image} alt="image" />
         </div>
+        <div className="lasName">{this.props.actor.name}</div>
+        <div className="lastSpecies">{this.props.actor.species}</div>
       </div>
     );
   }

@@ -16,12 +16,6 @@
 .photo {
   width: 240px;
 }
-.box {
-  margin-left: 20px;
-  background-color: rgb(69, 187, 207);
-  color: aliceblue;
-  font-weight: bold;
-}
 
 body {
   background-color: black;

@@ -13,18 +13,23 @@ class CharacterDetail extends React.Component {
 
     return (
       <div>
-        <Link to="/">initial Home</Link>
-        <div className="containerCard">
-          <div className="container1">
-            <div>
-              <img src={character.image} alt="imagen" />
-            </div>
-            <div>
-              <div>{character.name}</div>
+        <Link className="linkHome" to="/">
+          ⬅ initial Home
+        </Link>
+        <div>
+          <div className="containerCard1">
+            <img
+              className="containerImage"
+              src={character.image}
+              alt="images"
+            />
+
+            <div className="description">
+              <div className="lasNameCard">{character.name}</div>
               <div>Status:{character.status}</div>
               <div>Species:{character.species}</div>
               <div>Origin:{character.origin.name}</div>
-              <div>Episode:{character.episode}</div>{" "}
+              <div>Episode:{character.episode}</div>
             </div>
           </div>
         </div>
