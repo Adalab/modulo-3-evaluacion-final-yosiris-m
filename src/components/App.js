@@ -14,8 +14,10 @@ class App extends React.Component {
     this.state = {
       result: [],
       filterText: "",
+      filterSpecie: "",
     };
     this.handleFilterText = this.handleFilterText.bind(this);
+    this.handleFilterSpecies = this.handleFilterSpecies.bind(this);
   }
 
   componentDidMount() {
@@ -36,11 +38,20 @@ class App extends React.Component {
     });
   }
 
+  handleFilterSpecies(ev) {
+    this.setState({
+      filterSpecie: ev.target.value,
+    });
+  }
+
   render() {
     let filterResult = this.state.result.filter((actor) => {
-      return actor.name
-        .toLowerCase()
-        .includes(this.state.filterText.toLowerCase());
+      return (
+        actor.name
+          .toLowerCase()
+          .includes(this.state.filterText.toLowerCase()) &&
+        actor.species.includes(this.state.filterSpecie)
+      );
     });
 
     return (
@@ -54,8 +65,10 @@ class App extends React.Component {
             <Filters
               filterText={this.state.filterText}
               onFilterChange={this.handleFilterText}
+              onFilterSpecies={this.handleFilterSpecies}
+              filterSpecies={this.state.filterSpecie}
             />
-            <CharacterList characters={filterResult} />
+            <CharacterList characters={filterResult} filter={filterResult} />
           </Route>
           <Route
             exact
