@@ -14,8 +14,10 @@ class App extends React.Component {
     this.state = {
       result: [],
       filterText: "",
+      filterStatus: "",
     };
     this.handleFilterText = this.handleFilterText.bind(this);
+    this.handleFilterTextStatus = this.handleFilterTextStatus.bind(this);
   }
 
   componentDidMount() {
@@ -36,11 +38,20 @@ class App extends React.Component {
     });
   }
 
+  handleFilterTextStatus(ev) {
+    this.setState({
+      filterStatus: ev.target.value,
+    });
+  }
+
   render() {
     let filterResult = this.state.result.filter((actor) => {
-      return actor.name
-        .toLowerCase()
-        .includes(this.state.filterText.toLowerCase());
+      return (
+        actor.name
+          .toLowerCase()
+          .includes(this.state.filterText.toLowerCase()) &&
+        actor.status.includes(this.state.filterStatus)
+      );
     });
 
     return (
@@ -54,6 +65,8 @@ class App extends React.Component {
             <Filters
               filterText={this.state.filterText}
               onFilterChange={this.handleFilterText}
+              onFilterStatus={this.handleFilterTextStatus}
+              filterStatus={this.state.filterStatus}
             />
             <CharacterList characters={filterResult} />
           </Route>

@@ -13,6 +13,14 @@ class Filters extends React.Component {
             onChange={this.props.onFilterChange}
             value={this.props.filterText}
           />
+          <select
+            onChange={this.props.onFilterStatus}
+            value={this.props.filterStatus}
+          >
+            <option value="">All</option>
+            <option value="Alive">Alive</option>
+            <option value="Dead">Dead</option>
+          </select>
         </div>
       </form>
     );

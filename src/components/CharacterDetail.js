@@ -29,7 +29,7 @@ class CharacterDetail extends React.Component {
               <div className="lasNameCard">{character.name}</div>
               <div className="lasName1">Status:{character.status}</div>
               <div className="lasName1">Species:{character.species}</div>
-              <div className="lasName1">Origin:{character.origin.name}</div>
+              <div className="lasName1">Origin:{character.origin}</div>
               <div className="lasName1">Episode:{character.episode}</div>
             </div>
           </div>
