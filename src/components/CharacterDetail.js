@@ -24,7 +24,7 @@ class CharacterDetail extends React.Component {
     return (
       <div>
         <Link className="linkHome" to="/">
-          ⬅ initial Home
+          initial Home
         </Link>
         <div>
           <div className="containerCard1">

@@ -1,5 +1,5 @@
 .linkHome {
-  color: whitesmoke;
+  color: rgba(123, 236, 189, 0.918);
   text-decoration: none;
   display: flex;
   justify-content: center;
@@ -13,12 +13,12 @@
   justify-content: center;
   align-items: center;
   color: aliceblue;
-  background-color: rgb(223, 136, 136);
+  background-color: rgba(103, 233, 194, 0.918);
   height: 66vh;
   padding-top: 10px;
   margin-left: 15px;
   width: 88vw;
-  border: 8px solid rgb(69, 187, 207);
+  border: 8px solid rgb(167, 165, 163);
 }
 
 .containerImage {
@@ -74,13 +74,13 @@
 
 @media all and (min-width: 1200px) {
   .containerCard1 {
-    width: 30vw;
-    margin-left: 30%;
+    width: 28vw;
+    margin-left: 31%;
   }
 
   .containerImage {
-    margin-left: 30px;
-    padding-right: 30px;
+    height: 350px;
+    width: 300px;
   }
 
   .linkHome {

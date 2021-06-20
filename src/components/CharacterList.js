@@ -7,7 +7,7 @@ import "../stylesheets/CharacterList.css";
 class CharacterList extends React.Component {
   render() {
     if (this.props.characters.length === 0) {
-      return <div className="noResults">No results found</div>;
+      return <div className="noResults">No results found 😵 ...... </div>;
     }
 
     return (
