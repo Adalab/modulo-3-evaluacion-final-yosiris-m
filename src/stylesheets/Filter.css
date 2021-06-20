@@ -12,6 +12,17 @@
   background-color: rgba(0, 0, 0, 0.767);
 }
 
+.selectSpecie {
+  font-size: 18px;
+  color: whitesmoke;
+  border: 1px solid rgb(69, 187, 207);
+  width: 200px;
+  height: 37px;
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.767);
+  margin-left: 20px;
+}
+
 @media all and (min-width: 768px) {
   .inputText {
     font-size: 25px;
