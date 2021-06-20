@@ -12,6 +12,15 @@ class CharacterDetail extends React.Component {
       return <NotFound />;
     }
 
+    let statusIcon;
+    if (character.status === "Dead") {
+      statusIcon = <i class="fa-solid fa-coffin-cross" className="dead"></i>;
+    } else if (character.status === "Alive") {
+      statusIcon = <i class="fa-solid fa-heart"></i>;
+    } else {
+      statusIcon = <span>{character.status}</span>;
+    }
+
     return (
       <div>
         <Link className="linkHome" to="/">
@@ -27,9 +36,9 @@ class CharacterDetail extends React.Component {
 
             <div className="description">
               <div className="lasNameCard">{character.name}</div>
-              <div className="lasName1">Status:{character.status}</div>
+              <div className="lasName1">Status:{statusIcon}</div>
               <div className="lasName1">Species:{character.species}</div>
-              <div className="lasName1">Origin:{character.origin}</div>
+              <div className="lasName1">Origin:{character.origin.name}</div>
               <div className="lasName1">Episode:{character.episode}</div>
             </div>
           </div>

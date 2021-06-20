@@ -13,11 +13,12 @@
   justify-content: center;
   align-items: center;
   color: aliceblue;
-  background-color: rgb(69, 187, 207);
+  background-color: rgb(223, 136, 136);
   height: 66vh;
   padding-top: 10px;
   margin-left: 15px;
   width: 88vw;
+  border: 8px solid rgb(69, 187, 207);
 }
 
 .containerImage {
@@ -95,4 +96,8 @@
   .lasName1 {
     font-size: 18px;
   }
+}
+
+.dead {
+  width: 700px;
 }

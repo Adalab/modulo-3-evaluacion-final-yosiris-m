@@ -15,7 +15,7 @@
 }
 
 .photo {
-  width: 268px;
+  width: 200px;
 }
 
 .noResults {
@@ -28,7 +28,7 @@
 
 @media all and (min-width: 768px) {
   .CardImages {
-    grid-template-columns: 0fr 0fr;
+    grid-template-columns: 0fr 0fr 0fr;
   }
 
   .lasName {
@@ -36,7 +36,7 @@
   }
 
   .photo {
-    width: 350px;
+    width: 200px;
   }
 
   .noResults {
@@ -55,7 +55,7 @@
   }
 
   .photo {
-    width: 250px;
+    width: 200px;
   }
 
   .noResults {

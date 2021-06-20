@@ -41,6 +41,12 @@ class App extends React.Component {
     });
   }
 
+  handleFilterTextStatus(ev) {
+    this.setState({
+      filterStatus: ev.target.value,
+    });
+  }
+
   handleFilterSpecies(ev) {
     this.setState({
       filterSpecie: ev.target.value,
