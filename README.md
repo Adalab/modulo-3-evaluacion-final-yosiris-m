@@ -1,6 +1,6 @@
 # Rick and Morty Characters
 
-![Screenshot](img/screenshot.png)
+![Screenshot](./src/images/screenshot.png)
 
 This project is useful to search of Rick and Morty characters.
 This application has two screen:

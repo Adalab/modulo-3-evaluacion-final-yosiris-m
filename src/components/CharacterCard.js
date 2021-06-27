@@ -7,7 +7,11 @@ class CharacterCard extends React.Component {
     return (
       <div className="cardBox">
         <div>
-          <img className="photo" src={this.props.actor.image} alt="Character" />
+          <img
+            className="photo"
+            src={this.props.actor.image}
+            alt="CharacterCard"
+          />
         </div>
         <div className="lasName">{this.props.actor.name}</div>
         <div className="lastSpecies">{this.props.actor.species}</div>

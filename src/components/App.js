@@ -89,6 +89,9 @@ class App extends React.Component {
               <CharacterDetail {...props} characters={this.state.result} />
             )}
           />
+          <Route path="/">
+            <div className="notFound">Page not found</div>
+          </Route>
         </Switch>
       </div>
     );
