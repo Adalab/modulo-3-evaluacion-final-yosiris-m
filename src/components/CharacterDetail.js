@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import "../stylesheets/CharacterDetail.css";
 import NotFound from "./NotFound";
 import PropTypes from "prop-types";
+
 class CharacterDetail extends React.Component {
   render() {
     const character = this.props.characters.find(
@@ -14,19 +15,23 @@ class CharacterDetail extends React.Component {
 
     let statusIcon;
     if (character.status === "Dead") {
-      statusIcon = <i class="fa-solid fa-coffin-cross" className="dead"></i>;
+      statusIcon = <i class="fa fa-coffin-cross" className="dead"></i>;
     } else if (character.status === "Alive") {
-      statusIcon = <i class="fa-solid fa-heart"></i>;
+      statusIcon = <i class="fa fa-heart"></i>;
     } else {
       statusIcon = <span>{character.status}</span>;
     }
 
     return (
-      <div>
-        <Link className="linkHome" to="/">
-          initial Home
-        </Link>
+      <div className="box">
         <div>
+          <Link className="linkHome" to="/">
+            <i class="fas fa-home home"></i>
+            Home
+          </Link>
+        </div>
+
+        <div className="boxDetail">
           <div className="containerCard1">
             <img
               className="containerImage"
@@ -35,11 +40,11 @@ class CharacterDetail extends React.Component {
             />
 
             <div className="description">
-              <div className="lasNameCard">{character.name}</div>
-              <div className="lasName1">Status:{statusIcon}</div>
-              <div className="lasName1">Species:{character.species}</div>
-              <div className="lasName1">Origin:{character.origin.name}</div>
-              <div className="lasName1">Episode:{character.episode}</div>
+              <div className="lasNameCard"> {character.name}</div>
+              <div className="lasName1"> Status: {statusIcon}</div>
+              <div className="lasName1"> Species: {character.species}</div>
+              <div className="lasName1"> Origin: {character.origin}</div>
+              <div className="lasName1"> Episode: {character.episode}</div>
             </div>
           </div>
         </div>

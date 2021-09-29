@@ -2,7 +2,7 @@ import "../stylesheets/App.css";
 import React from "react";
 import FetchData from "../services/Api";
 import ls from "../services/localExport";
-import logo from "../images/Rick_Morty_logo.png";
+
 import CharacterList from "./CharacterList";
 import Filters from "./Filters";
 import CharacterDetail from "./CharacterDetail";
@@ -66,33 +66,32 @@ class App extends React.Component {
 
     return (
       <div>
-        <div className="title">
-          <img src={logo} className="images" alt="imagen" />
-        </div>
-        <Switch>
-          <Route exact path="/">
-            <div className="title"></div>
-            <Filters
-              filterText={this.state.filterText}
-              onFilterChange={this.handleFilterText}
-              onFilterStatus={this.handleFilterTextStatus}
-              filterStatus={this.state.filterStatus}
-              onFilterSpecies={this.handleFilterSpecies}
-              filterSpecies={this.state.filterSpecie}
+        <div>
+          <Switch>
+            <Route exact path="/">
+              <div className="title"></div>
+              <Filters
+                filterText={this.state.filterText}
+                onFilterChange={this.handleFilterText}
+                onFilterStatus={this.handleFilterTextStatus}
+                filterStatus={this.state.filterStatus}
+                onFilterSpecies={this.handleFilterSpecies}
+                filterSpecies={this.state.filterSpecie}
+              />
+              <CharacterList characters={filterResult} />
+            </Route>
+            <Route
+              exact
+              path="/character/:id"
+              render={(props) => (
+                <CharacterDetail {...props} characters={this.state.result} />
+              )}
             />
-            <CharacterList characters={filterResult} />
-          </Route>
-          <Route
-            exact
-            path="/character/:id"
-            render={(props) => (
-              <CharacterDetail {...props} characters={this.state.result} />
-            )}
-          />
-          <Route path="/">
-            <div className="notFound">Page not found</div>
-          </Route>
-        </Switch>
+            <Route path="/">
+              <div className="notFound">Page not found</div>
+            </Route>
+          </Switch>
+        </div>
       </div>
     );
   }

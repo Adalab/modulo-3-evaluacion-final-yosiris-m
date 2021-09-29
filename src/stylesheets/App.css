@@ -1,10 +1,27 @@
 body {
-  background-color: black;
+  background-color: rgb(243, 236, 225);
 }
 .title {
   text-align: center;
 }
+
+
 .images {
-  width: 250px;
-  padding: 30px 0;
+  width: 200px;
+  height: 200px;
+  padding: 15px 0;
+  border-radius: 100%;
+
+ 
+
+  }
+ 
+
+  @media all and (min-width: 768px) {
+    .images {
+      width: 400px;
+      height: 400px;
+      padding: 10px 0;
+      margin-top: 60px;
+    }
 }

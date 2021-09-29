@@ -1,53 +1,73 @@
+.boxDetail {
+  margin: 30px;
+}
+
+.box {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
 .linkHome {
-  color: rgba(123, 236, 189, 0.918);
+  color: rgba(20, 20, 20, 0.918);
   text-decoration: none;
   display: flex;
   justify-content: center;
-  margin-bottom: 20px;
-  margin-left: 50%;
+  margin: 50px; 
   font-size: 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.home{ 
+  color: rgb(41, 129, 230);
+  font-size: 35px;
+  margin-right: 15px;
+ 
 }
 .containerCard1 {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  color: aliceblue;
-  background-color: rgba(103, 233, 194, 0.918);
-  height: 66vh;
-  padding-top: 10px;
-  margin-left: 15px;
-  width: 88vw;
-  border: 8px solid rgb(167, 165, 163);
+  color: rgb(71, 87, 85);
+  background-color: rgba(190, 228, 159, 0.767);
+  height: 59vh; 
+  padding-top: 25px;
+  width: 80vw;
+  box-shadow: 0px 0px 8px 4px #393f3b;
 }
 
 .containerImage {
-  margin-left: 30px;
+  margin-left: 15px;
   padding-right: 30px;
-  width: 240px;
+  width: 160px;
   padding-top: 10px;
+  box-shadow: 0px 0px 4px 1px #82acce;
+  
 }
 
 .lasNameCard {
   font-weight: bold;
   font-size: 22px;
   margin-top: 10px;
+  margin-left: 25px;
+  color: rgb(13, 122, 218);
 }
 
 .lasName1 {
   font-size: 18px;
+  margin-left: 25px;
+  color: rgb(13, 122, 218);
 }
 
 .description {
   padding-right: 20px;
+  line-height: 30px;
 }
 
 @media all and (min-width: 768px) {
-  .images {
-    width: 400px;
-    padding: 30px 0;
-    margin-top: 60px;
-  }
+ 
 
   .containerCard1 {
     display: flex;
@@ -56,6 +76,10 @@
     width: 80vw;
     margin-left: 10%;
     height: 370px;
+  }
+  .linkHome {
+    margin-left: 25px;
+    margin-top: 70px;
   }
 
   .lasNameCard {
@@ -74,8 +98,10 @@
 
 @media all and (min-width: 1200px) {
   .containerCard1 {
-    width: 28vw;
-    margin-left: 31%;
+    height: 66vh;
+    padding-top: 10px;
+    width: 50vw;
+    margin-left: 20%;
   }
 
   .containerImage {
