@@ -27,7 +27,7 @@
 .inputText {
   font-size: 18px;
   color: rgb(252, 248, 248);
-  border: 1px solid rgb(250, 254, 255);
+  border: 1px solid rgb(187, 192, 194);
   padding-left: 15px;
   height: 30px;
   background-color: rgba(190, 228, 159, 0.767);
@@ -37,7 +37,7 @@
 .selectSpecie {
   font-size: 18px;
   color: rgb(116, 119, 117);
-  border: 1px solid rgb(255, 255, 255);
+  border: 1px solid rgb(195, 192, 192);
   height: 37px;
   background-color: rgba(190, 228, 159, 0.767);
   margin-left: 20px;
@@ -47,7 +47,7 @@
 .selectStatus {
   font-size: 18px;
   color: rgb(116, 119, 117);
-  border: 1px solid rgb(252, 254, 255);
+  border: 1px solid rgb(184, 186, 187);
   height: 37px;
   background-color: rgba(190, 228, 159, 0.767);
   margin-bottom: 10px;
